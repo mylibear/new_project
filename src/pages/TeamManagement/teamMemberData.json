@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "memberName": "John Smith",
+        "email": "johnsmith@mail.com",
+        "dateAdded": "17/02/2022",
+        "taskAssigned": "None",
+        "isLeader": "No"
+    },
+    {
+        "id": 2,
+        "memberName": "Joe Smith",
+        "email": "joesmith@mail.com",
+        "dateAdded": "18/02/2022",
+        "taskAssigned": "None",
+        "isLeader": "No"
+    }
+]
