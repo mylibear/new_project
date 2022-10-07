@@ -1,0 +1,30 @@
+.cards-wrapper{
+    display: flex;  
+}
+
+.card{
+    margin-right: 20px;
+}
+
+.content{
+    margin-top: 5%;
+    margin-left: 12%;
+}
+
+#signup{
+    margin-top: 5px;
+    color: grey;
+}
+
+
+/*registration*/
+.col-md-12{
+    margin: 10px;
+}
+.container-fluid{
+    padding-left: 30px;
+}
+.search{
+    display: flex;
+    flex-direction:column;
+}
