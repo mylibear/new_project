@@ -57,7 +57,7 @@
                         </ul>
                     </div>
 					<div>
-						<input type="button" id="fav_btn" value="Add to Favorites list" class="btn btn-primary">
+						<input type="button" id="fav_btn" value="Add to Favorites" class="btn btn-primary">
 					</div>
                 </div>
 				

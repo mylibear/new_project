@@ -53,7 +53,7 @@
           <a class="nav-link" href="<?php echo base_url();?>/login/logout">Logout</a>
         </button>
 		<button class="btn btn-outline-primary-sm">
-          <a class="nav-link" href="<?php echo base_url();?>/user/fav_list">Favorite List</a>
+          <a class="nav-link" href="<?php echo base_url();?>/user/fav_list">Favorites</a>
         </button>
         <?php endif; ?> 
         <button class="btn btn-outline-primary-sm">

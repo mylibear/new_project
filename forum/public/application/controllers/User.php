@@ -169,7 +169,6 @@ class User extends CI_Controller{
                         $data['published_date']=$today;
 						unset($data['submit']);
 
-
 						// echo '<pre>';
 						// print_r($data);
 						// echo '</pre>';
@@ -291,7 +290,7 @@ class User extends CI_Controller{
 			$data["is_user"]=0;
 		}
 		$this ->load->model('comment_model');
-		$data["comment"]=$post["comment"];
+		$data['comment']=$post["comment"];
 		$data["post_id"]=$post["post_id"];
 		$data["time"]=time();
 		$this->comment_model->addComment($data);
@@ -302,9 +301,9 @@ class User extends CI_Controller{
 		if ($user_id){
 			$post =$this->input->post();
 			$data=array();
-			$data["post_id"]=$post["post_id"];
-			$data["date_published"]=date('Y-m-d');
-			$data["user_id"]=$user_id;
+			$data['post_id']=$post["post_id"];
+			$data['date_published']=date('Y-m-d');
+			$data['user_id']=$user_id;
 			$this->load->model('bookmark_model');
 			$info=$this->bookmark_model->addFav($data);
 			echo $info;
