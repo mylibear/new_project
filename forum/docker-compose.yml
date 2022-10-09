@@ -39,6 +39,7 @@ services:
 
   phpmyadmin:
     image: 'phpmyadmin/phpmyadmin'
+    container_name: phpmyadmin
     restart: always
     links:
       - database
@@ -53,5 +54,10 @@ services:
 
 networks:
   codeigniter_net:
+
+#容器跑起来，需要使用这个命令，将文件拷贝到容器里，后重启容器
+# docker cp ./config.inc.php phpmyadmin:/etc/phpmyadmin/
+# docker cp .\php\  forum_php:/usr/local/etc
+
 
 
