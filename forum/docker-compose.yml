@@ -2,48 +2,56 @@ version: '3'
 services:
 
   nginx:
-    image: nginx:latest
+    image: 'nginx:latest'
+    container_name: forum
     volumes:
       - ./public:/public
       - ./site.conf:/etc/nginx/conf.d/default.conf
-    networks: 
-      codeigniter_net:
+    networks:
+      - codeigniter_net
     ports:
       - "8181:90"
     restart: always
+    depends_on:
+      - php
 
   php:
-    build: 
+    build:
       context: ./public
       dockerfile: Dockerfile
+    container_name: forum_php
     volumes:
       - ./public:/public
     depends_on:
       - database
     networks:
-      codeigniter_net:
+      - codeigniter_net
 
   database:
-    image: mysql:latest
-    platform: linux/x86_64
+    image: 'mysql:5.7'
+    container_name: mysql_forum5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=ci
     networks:
-      codeigniter_net:
+      - codeigniter_net
     ports:
       - 3306:3306
-    env_file:
-      - .env
 
   phpmyadmin:
-    depends_on:
-      - database
-    image: phpmyadmin/phpmyadmin
+    image: 'phpmyadmin/phpmyadmin'
     restart: always
+    links:
+      - database
+    environment:
+      PMA_HOST: database
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    networks:
+      - codeigniter_net
     ports:
       - '8282:80'
-    env_file:
-      - .env
-    networks:
-      codeigniter_net:
- 
+
 networks:
   codeigniter_net:
+
+
