@@ -14,9 +14,6 @@ class Post extends CI_Controller {
 	{
 		$this->load->model('post_model');
 		$posts=$this->post_model->getPosts();
-        if(null===$posts){
-            $posts = [];
-        }
 		$this->load->view('template/header');
 		$this->load->view('post',['posts'=>$posts]);
 		$this->load->view('template/footer');
