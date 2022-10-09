@@ -1,0 +1,47 @@
+__ci_last_regenerate|i:1665296113;message|s:1600:"The following SMTP error was encountered: 110 Connection timed out<br />Unable to send email using PHP SMTP. Your server might not be configured to send mail using this method.<br /><pre>Date: Sun, 9 Oct 2022 06:11:03 +0000
+From: &lt;infs7202@gmail.com&gt;
+Return-Path: &lt;infs7202@gmail.com&gt;
+To: 923620981@qq.com
+Cc: s4579487@student.uq.edu.au
+Subject: =?ISO-8859-1?Q?=53=69=67=6E=75=70=20=56=65=72=69=66=69=63=61=74=69=6F=6E?= =?ISO-8859-1?Q?=20=45=6D=61=69=6C?=
+Reply-To: &lt;infs7202@gmail.com&gt;
+User-Agent: CodeIgniter
+X-Sender: infs7202@gmail.com
+X-Mailer: CodeIgniter
+X-Priority: 3 (Normal)
+Message-ID: &lt;634265f7571fb@gmail.com&gt;
+Mime-Version: 1.0
+
+
+Content-Type: multipart/alternative; boundary=&quot;B_ALT_634265f757203&quot;
+
+This is a multi-part message in MIME format.
+Your email application may not support this format.
+
+--B_ALT_634265f757203
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+
+Thank you for Registering.
+ Please click the link below to activate your account.
+ Activate My Account
+
+
+--B_ALT_634265f757203
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+
+ =3Chtml=3E
+ =3Chead=3E
+ =3Ctitle=3EVerification Code=3C/title=3E
+ =3C/head=3E
+ =3Cbody=3E
+ =3Ch2=3EThank you for Registering.=3C/h2=3E
+ =3Cp=3EPlease click the link below to activate your account.=3C/p=3E
+ =3Ch4=3E=3Ca href=3D'http://localhost:8181/register/verify=5Femail/88ebd3c=
+01f2be2f60779d334d82e749b'=3EActivate My Account=3C/a=3E=3C/h4=3E
+ =3C/body=3E
+ =3C/html=3E
+
+--B_ALT_634265f757203--</pre>";__ci_vars|a:1:{s:7:"message";s:3:"new";}

@@ -1,0 +1,57 @@
+version: '3'
+services:
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./public:/public
+      - ./site.conf:/etc/nginx/conf.d/default.conf
+    networks: 
+      codeigniter_net:
+    ports:
+      - "8181:90"
+    restart: always
+
+  php:
+    build: 
+      context: ./public
+      dockerfile: Dockerfile
+    volumes:
+      - ./public:/public
+    depends_on:
+      - database
+    networks:
+      codeigniter_net:
+
+  database:
+    image: mysql:latest
+    platform: linux/x86_64
+    networks:
+      codeigniter_net:
+    ports:
+      - 3306:3306
+    env_file:
+      - .env
+
+  phpmyadmin:
+    depends_on:
+      - database
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '8282:80'
+    env_file:
+      - .env
+    networks:
+      codeigniter_net:
+ 
+networks:
+  codeigniter_net:
+
+#容器跑起来，需要使用这个命令，将文件拷贝到容器里，后重启容器
+# docker cp ./config.inc.php phpmyadmin:/etc/phpmyadmin/
+# docker cp .\php\  forum_php:/usr/local/etc
+#docker-compose -f docker-compose.yml up --build
+
+
+
